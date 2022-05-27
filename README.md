@@ -2,10 +2,6 @@
 
 Simple library to get address information from the Kleros curated tags registry.
 
-## Description
-
-An in-depth paragraph about your project and overview of use.
-
 ## Getting Started
 
 ### Installing
@@ -18,7 +14,7 @@ npm install @kleros/address-tags-sdk
 yarn add @kleros/address-tags-sdk
 ```
 
-### Executing program
+### Example
 
 ```javascript
 import { getAddressInfo } from "@kleros/address-tags-sdk";
