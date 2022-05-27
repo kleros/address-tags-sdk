@@ -1,0 +1,82 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx",".ts",".tsx"]
+      }
+    }
+  },
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:security/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": [
+    "prettier",
+    "functional",
+    "security",
+    "import"
+  ],
+  "ignorePatterns": [
+    "src/assets"
+  ],
+  "rules": {
+    "max-len": [
+      "warn",
+      {
+        "code": 80
+      }
+    ],
+    "no-unused-vars": "off",
+    "func-style": [2, "expression", { "allowArrowFunctions": true }],
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "(^_+[0-9]*$)|([iI]gnored$)|(^ignored)",
+        "argsIgnorePattern": "(^_+[0-9]*$)|([iI]gnored$)|(^ignored)"
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error",
+          "info",
+          "debug"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "security/detect-object-injection": "off",
+    "security/detect-non-literal-fs-filename": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@kleros/address-tags-sdk",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "generate": "yarn graphql-codegen",
+    "build": "yarn generate && tsc"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.2.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.11",
+    "@graphql-codegen/typescript-operations": "^2.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-functional": "^4.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "parcel": "^2.6.0",
+    "prettier": "^2.6.2",
+    "tsutils": "^3.21.0",
+    "typescript": "^4.7.2"
+  }
+}
