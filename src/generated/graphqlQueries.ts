@@ -134,6 +134,7 @@ export type ItemProp_Filter = {
   isIdentifier_not?: InputMaybe<Scalars['Boolean']>;
   isIdentifier_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
   item?: InputMaybe<Scalars['String']>;
+  item_?: InputMaybe<LItem_Filter>;
   item_contains?: InputMaybe<Scalars['String']>;
   item_contains_nocase?: InputMaybe<Scalars['String']>;
   item_ends_with?: InputMaybe<Scalars['String']>;
@@ -295,6 +296,7 @@ export type Item_Filter = {
   registryAddress_not?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_contains?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  registry_?: InputMaybe<Registry_Filter>;
   registry_contains?: InputMaybe<Scalars['String']>;
   registry_contains_nocase?: InputMaybe<Scalars['String']>;
   registry_ends_with?: InputMaybe<Scalars['String']>;
@@ -314,6 +316,7 @@ export type Item_Filter = {
   registry_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   registry_starts_with?: InputMaybe<Scalars['String']>;
   registry_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  requests_?: InputMaybe<Request_Filter>;
   status?: InputMaybe<Status>;
   status_in?: InputMaybe<Array<Status>>;
   status_not?: InputMaybe<Status>;
@@ -368,6 +371,7 @@ export type LContribution_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   round?: InputMaybe<Scalars['String']>;
+  round_?: InputMaybe<LRound_Filter>;
   round_contains?: InputMaybe<Scalars['String']>;
   round_contains_nocase?: InputMaybe<Scalars['String']>;
   round_ends_with?: InputMaybe<Scalars['String']>;
@@ -558,6 +562,7 @@ export type LItem_Filter = {
   numberOfRequests_lte?: InputMaybe<Scalars['BigInt']>;
   numberOfRequests_not?: InputMaybe<Scalars['BigInt']>;
   numberOfRequests_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  props_?: InputMaybe<ItemProp_Filter>;
   registry?: InputMaybe<Scalars['String']>;
   registryAddress?: InputMaybe<Scalars['Bytes']>;
   registryAddress_contains?: InputMaybe<Scalars['Bytes']>;
@@ -565,6 +570,7 @@ export type LItem_Filter = {
   registryAddress_not?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_contains?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  registry_?: InputMaybe<LRegistry_Filter>;
   registry_contains?: InputMaybe<Scalars['String']>;
   registry_contains_nocase?: InputMaybe<Scalars['String']>;
   registry_ends_with?: InputMaybe<Scalars['String']>;
@@ -584,6 +590,7 @@ export type LItem_Filter = {
   registry_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   registry_starts_with?: InputMaybe<Scalars['String']>;
   registry_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  requests_?: InputMaybe<LRequest_Filter>;
   status?: InputMaybe<Status>;
   status_in?: InputMaybe<Array<Status>>;
   status_not?: InputMaybe<Status>;
@@ -657,6 +664,7 @@ export type LRegistry_Filter = {
   /** Filter for the block changed event. */
   _change_block?: InputMaybe<BlockChangedFilter>;
   clearingMetaEvidence?: InputMaybe<Scalars['String']>;
+  clearingMetaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   clearingMetaEvidence_contains?: InputMaybe<Scalars['String']>;
   clearingMetaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   clearingMetaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -684,6 +692,7 @@ export type LRegistry_Filter = {
   id_lte?: InputMaybe<Scalars['ID']>;
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+  items_?: InputMaybe<LItem_Filter>;
   metaEvidenceCount?: InputMaybe<Scalars['BigInt']>;
   metaEvidenceCount_gt?: InputMaybe<Scalars['BigInt']>;
   metaEvidenceCount_gte?: InputMaybe<Scalars['BigInt']>;
@@ -741,6 +750,7 @@ export type LRegistry_Filter = {
   numberOfRegistrationRequested_not?: InputMaybe<Scalars['BigInt']>;
   numberOfRegistrationRequested_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   registrationMetaEvidence?: InputMaybe<Scalars['String']>;
+  registrationMetaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   registrationMetaEvidence_contains?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -760,6 +770,7 @@ export type LRegistry_Filter = {
   registrationMetaEvidence_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_starts_with?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  requests_?: InputMaybe<LRequest_Filter>;
 };
 
 export enum LRegistry_OrderBy {
@@ -892,6 +903,7 @@ export type LRequest_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   item?: InputMaybe<Scalars['String']>;
+  item_?: InputMaybe<LItem_Filter>;
   item_contains?: InputMaybe<Scalars['String']>;
   item_contains_nocase?: InputMaybe<Scalars['String']>;
   item_ends_with?: InputMaybe<Scalars['String']>;
@@ -912,6 +924,7 @@ export type LRequest_Filter = {
   item_starts_with?: InputMaybe<Scalars['String']>;
   item_starts_with_nocase?: InputMaybe<Scalars['String']>;
   metaEvidence?: InputMaybe<Scalars['String']>;
+  metaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   metaEvidence_contains?: InputMaybe<Scalars['String']>;
   metaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   metaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -946,6 +959,7 @@ export type LRequest_Filter = {
   registryAddress_not?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_contains?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  registry_?: InputMaybe<LRegistry_Filter>;
   registry_contains?: InputMaybe<Scalars['String']>;
   registry_contains_nocase?: InputMaybe<Scalars['String']>;
   registry_ends_with?: InputMaybe<Scalars['String']>;
@@ -993,6 +1007,7 @@ export type LRequest_Filter = {
   resolved_in?: InputMaybe<Array<Scalars['Boolean']>>;
   resolved_not?: InputMaybe<Scalars['Boolean']>;
   resolved_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
+  rounds_?: InputMaybe<LRound_Filter>;
   submissionTime?: InputMaybe<Scalars['BigInt']>;
   submissionTime_gt?: InputMaybe<Scalars['BigInt']>;
   submissionTime_gte?: InputMaybe<Scalars['BigInt']>;
@@ -1108,6 +1123,7 @@ export type LRound_Filter = {
   appealed_in?: InputMaybe<Array<Scalars['Boolean']>>;
   appealed_not?: InputMaybe<Scalars['Boolean']>;
   appealed_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
+  contributions_?: InputMaybe<LContribution_Filter>;
   creationTime?: InputMaybe<Scalars['BigInt']>;
   creationTime_gt?: InputMaybe<Scalars['BigInt']>;
   creationTime_gte?: InputMaybe<Scalars['BigInt']>;
@@ -1149,6 +1165,7 @@ export type LRound_Filter = {
   numberOfContributions_not?: InputMaybe<Scalars['BigInt']>;
   numberOfContributions_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   request?: InputMaybe<Scalars['String']>;
+  request_?: InputMaybe<LRequest_Filter>;
   request_contains?: InputMaybe<Scalars['String']>;
   request_contains_nocase?: InputMaybe<Scalars['String']>;
   request_ends_with?: InputMaybe<Scalars['String']>;
@@ -1553,6 +1570,7 @@ export type Registry_Filter = {
   /** Filter for the block changed event. */
   _change_block?: InputMaybe<BlockChangedFilter>;
   clearingMetaEvidence?: InputMaybe<Scalars['String']>;
+  clearingMetaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   clearingMetaEvidence_contains?: InputMaybe<Scalars['String']>;
   clearingMetaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   clearingMetaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -1580,6 +1598,7 @@ export type Registry_Filter = {
   id_lte?: InputMaybe<Scalars['ID']>;
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+  items_?: InputMaybe<Item_Filter>;
   metaEvidenceCount?: InputMaybe<Scalars['BigInt']>;
   metaEvidenceCount_gt?: InputMaybe<Scalars['BigInt']>;
   metaEvidenceCount_gte?: InputMaybe<Scalars['BigInt']>;
@@ -1597,6 +1616,7 @@ export type Registry_Filter = {
   numberOfItems_not?: InputMaybe<Scalars['BigInt']>;
   numberOfItems_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   registrationMetaEvidence?: InputMaybe<Scalars['String']>;
+  registrationMetaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   registrationMetaEvidence_contains?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -1616,6 +1636,7 @@ export type Registry_Filter = {
   registrationMetaEvidence_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_starts_with?: InputMaybe<Scalars['String']>;
   registrationMetaEvidence_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  requests_?: InputMaybe<Request_Filter>;
 };
 
 export enum Registry_OrderBy {
@@ -1733,6 +1754,7 @@ export type Request_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   item?: InputMaybe<Scalars['String']>;
+  item_?: InputMaybe<Item_Filter>;
   item_contains?: InputMaybe<Scalars['String']>;
   item_contains_nocase?: InputMaybe<Scalars['String']>;
   item_ends_with?: InputMaybe<Scalars['String']>;
@@ -1753,6 +1775,7 @@ export type Request_Filter = {
   item_starts_with?: InputMaybe<Scalars['String']>;
   item_starts_with_nocase?: InputMaybe<Scalars['String']>;
   metaEvidence?: InputMaybe<Scalars['String']>;
+  metaEvidence_?: InputMaybe<MetaEvidence_Filter>;
   metaEvidence_contains?: InputMaybe<Scalars['String']>;
   metaEvidence_contains_nocase?: InputMaybe<Scalars['String']>;
   metaEvidence_ends_with?: InputMaybe<Scalars['String']>;
@@ -1787,6 +1810,7 @@ export type Request_Filter = {
   registryAddress_not?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_contains?: InputMaybe<Scalars['Bytes']>;
   registryAddress_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  registry_?: InputMaybe<Registry_Filter>;
   registry_contains?: InputMaybe<Scalars['String']>;
   registry_contains_nocase?: InputMaybe<Scalars['String']>;
   registry_ends_with?: InputMaybe<Scalars['String']>;
@@ -1828,6 +1852,7 @@ export type Request_Filter = {
   resolved_in?: InputMaybe<Array<Scalars['Boolean']>>;
   resolved_not?: InputMaybe<Scalars['Boolean']>;
   resolved_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
+  rounds_?: InputMaybe<Round_Filter>;
   submissionTime?: InputMaybe<Scalars['BigInt']>;
   submissionTime_gt?: InputMaybe<Scalars['BigInt']>;
   submissionTime_gte?: InputMaybe<Scalars['BigInt']>;
@@ -1955,6 +1980,7 @@ export type Round_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   request?: InputMaybe<Scalars['String']>;
+  request_?: InputMaybe<Request_Filter>;
   request_contains?: InputMaybe<Scalars['String']>;
   request_contains_nocase?: InputMaybe<Scalars['String']>;
   request_ends_with?: InputMaybe<Scalars['String']>;
