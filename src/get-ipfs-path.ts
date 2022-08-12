@@ -30,12 +30,12 @@ export const getIPFSPath = async (address: string): Promise<string> => {
     address,
     registryAddress: MAINNET_REGISTRY_ADDRESS,
   }).then((result) => result as GetAddressInfoQuery);
-  if (ethereumSubgraphResult.litems === []) {
+  if (ethereumSubgraphResult.litems.length === 0) {
     const gnosisSubgraphResult = await GNOSIS_SUBGRAPH_CLIENT.request(QUERY, {
       address,
       registryAddress: GNOSIS_REGISTRY_ADDRESS,
     }).then((result) => result as GetAddressInfoQuery);
-    if (gnosisSubgraphResult.litems === []) throw "Item not found.";
+    if (gnosisSubgraphResult.litems.length === 0) throw "Item not found.";
     return gnosisSubgraphResult.litems[0].data;
   } else return ethereumSubgraphResult.litems[0].data;
 };
