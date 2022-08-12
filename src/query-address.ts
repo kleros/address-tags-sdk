@@ -1,3 +1,4 @@
+import { toChecksumAddress } from "./checksum-address";
 import { getIPFSPath } from "./get-ipfs-path";
 import { getInfoFromIPFS, IAddressInformation } from "./get-info-from-ipfs";
 
@@ -15,7 +16,8 @@ export const getAddressInfo = async (
 ): Promise<IAddressInformation | undefined> => {
   try {
     validateParams(address, ipfsGateway);
-    const ipfsPath = await getIPFSPath(address);
+    const checksumAddress = toChecksumAddress(address);
+    const ipfsPath = await getIPFSPath(checksumAddress);
     return await getInfoFromIPFS(ipfsPath, ipfsGateway);
   } catch (error) {
     console.error("Error in getAddressInfo: ", error);
