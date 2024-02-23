@@ -1,9 +1,11 @@
 {
   "name": "@kleros/address-tags-sdk",
-  "version": "0.2.0",
+  "description": "Simple library to get address information from the Kleros curated tags registry.",
+  "version": "0.2.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "repository": "git@github.com:kleros/address-tags-sdk.git",
   "scripts": {
     "generate": "yarn graphql-codegen",
     "build": "yarn generate && tsc"
