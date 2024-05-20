@@ -1,4 +1,4 @@
-schema: https://api.thegraph.com/subgraphs/name/kleros/curate
+schema: https://api.studio.thegraph.com/query/61738/legacy-curate-gnosis/version/latest
 documents: './src/*.ts'
 generates:
   src/generated/graphqlQueries.ts:
