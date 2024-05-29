@@ -2,11 +2,11 @@ import { gql, GraphQLClient } from "graphql-request";
 import { GetAddressInfoQuery } from "./generated/graphqlQueries";
 
 const MAINNET_SUBGRAPH_CLIENT = new GraphQLClient(
-  "https://api.thegraph.com/subgraphs/name/kleros/curate"
+  "https://api.studio.thegraph.com/query/61738/legacy-curate-mainnet/version/latest"
 );
 const MAINNET_REGISTRY_ADDRESS = "0x6e31d83b0c696f7d57241d3dffd0f2b628d14c67";
 const GNOSIS_SUBGRAPH_CLIENT = new GraphQLClient(
-  "https://api.thegraph.com/subgraphs/name/eccentricexit/curate-xdai-ii"
+  "https://api.studio.thegraph.com/query/61738/legacy-curate-gnosis/version/latest"
 );
 const GNOSIS_REGISTRY_ADDRESS = "0x76944a2678a0954a610096ee78e8ceb8d46d5922";
 
@@ -16,10 +16,12 @@ const QUERY = gql`
       where: {
         registry: $registryAddress
         status: Registered
-        keywords_contains: $address
+        metadata_: { keywords_contains: $address }
       }
     ) {
-      keywords
+      metadata {
+        keywords
+      }
       data
     }
   }
