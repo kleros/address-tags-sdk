@@ -1,7 +1,7 @@
 {
   "name": "@kleros/address-tags-sdk",
   "description": "Simple library to get address information from the Kleros curated tags registry.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -33,5 +33,9 @@
     "prettier": "^2.6.2",
     "tsutils": "^3.21.0",
     "typescript": "^4.7.2"
+  },
+  "volta": {
+    "node": "16.20.2",
+    "yarn": "1.22.22"
   }
 }
